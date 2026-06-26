@@ -1,0 +1,93 @@
+.projects-section {
+  flex-direction: column;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  perspective: 1000px;
+}
+
+.project-card {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.project-year {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.05);
+  z-index: 0;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+  z-index: 1;
+}
+
+.project-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  z-index: 1;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.tech-tag {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  background: rgba(138, 43, 226, 0.1);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  border-radius: 20px;
+  color: var(--neon-blue);
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  z-index: 1;
+}
+
+.icon-link {
+  color: #fff;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.icon-link:hover {
+  opacity: 1;
+  color: var(--neon-purple);
+  transform: scale(1.1);
+}
